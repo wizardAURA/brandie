@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../model/post_model.dart';
+import '../viewmodels/smart_post_viewModel.dart';
 
 
 class EditCaptionPage extends StatefulWidget {
@@ -59,18 +61,27 @@ class _EditCaptionPageState extends State<EditCaptionPage> {
                   ),
 
 
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFC8E6C9), // Light green matching Figma
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: const Text(
-                      'Save',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
+                  GestureDetector(
+                    onTap: () {
+                      context.read<SmartPostViewmodel>().updatePostCaption(
+                        widget.post.id,
+                        _textController.text,
+                      );
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFC8E6C9), // Light green matching Figma
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const Text(
+                        'Save',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
                       ),
                     ),
                   ),

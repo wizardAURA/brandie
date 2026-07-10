@@ -35,6 +35,13 @@ class SmartPostViewmodel extends ChangeNotifier{
     currentIndex = index;
     resetAndStartTimer();
   }
+  void updatePostCaption(String postId, String newText) {
+    final index = posts.indexWhere((post) => post.id == postId);
+    if (index != -1) {
+      posts[index] = posts[index].copyWith(caption: newText);
+      notifyListeners();
+    }
+  }
   void resetAndStartTimer() {
     isProductCardVisible = false;
     notifyListeners();

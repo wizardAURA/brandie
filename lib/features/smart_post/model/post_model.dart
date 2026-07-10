@@ -20,4 +20,21 @@ class PostModel {
     required this.referralCode,
     required this.referralLink
   });
+
+PostModel copyWith({
+  String? caption,
+
+}) {
+  return PostModel(
+    id: this.id,
+    backgroundImageUrl: this.backgroundImageUrl,
+    productName: this.productName,
+    price: this.price,
+    discountText: this.discountText,
+    songTitle: this.songTitle,
+    referralCode: this.referralCode,
+    referralLink: this.referralLink,
+    caption: caption ?? this.caption,
+  );
+}
 }
