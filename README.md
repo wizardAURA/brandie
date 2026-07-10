@@ -1,17 +1,29 @@
-# brandie
+Ai Smart Post (Brandie)
+This repository contains a high-fidelity, pixel-perfect Flutter implementation of the Smart Post feature. This project was developed as part of a technical UI evaluation to demonstrate translating detailed design specifications into a polished, functional mobile interface.
 
-A new Flutter project.
+The development process prioritized three main areas:
 
-## Getting Started
+Clean architecture for a maintainable and readable codebase.
 
-This project is a starting point for a Flutter application.
+Responsive layout design to ensure the interface adapts correctly to various screen sizes.
 
-A few resources to get you started if this is your first Flutter project:
+Premium UI elements and effects to deliver a smooth, professional user experience.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+How to Run the Project
+To get this project running locally, please ensure you have the Flutter SDK installed on your system.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Clone the repository to your local machine:
+
+Bash
+git clone https://github.com/wizardAURA/brandie.git
+cd brandie
+Fetch the required project dependencies:
+
+Bash
+flutter pub get
+Launch the application on your connected device or emulator:
+
+Bash
+flutter run
+  
+   
