@@ -17,7 +17,7 @@ class _SmartShareState extends State<SmartShare> {
   @override
   void initState() {
     super.initState();
-    // Start the animation timer for the first post when the page loads
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<SmartPostViewmodel>().onPageChanged(0);
     });
@@ -59,7 +59,7 @@ class _SmartShareState extends State<SmartShare> {
                         ),
                       ),
                     ),
-                    // Top Overlay (User & Badge)
+
                     Positioned(
                       top: 16,
                       left: 16,
@@ -82,7 +82,7 @@ class _SmartShareState extends State<SmartShare> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  // The new Gradient Badge!
+
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                     decoration: BoxDecoration(
@@ -144,7 +144,6 @@ class _SmartShareState extends State<SmartShare> {
                         ],
                       ),
                     ),
-                    // Bottom Overlay (Product, Caption, Socials)
                     PostOverlay(post: post),
                   ],
                 );

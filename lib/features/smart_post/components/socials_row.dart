@@ -27,7 +27,7 @@ class SocialShareRow extends StatelessWidget {
         backgroundColor: Colors.white24,
         child: Image.asset(
           assetPath,
-          width: 28, // Adjusted slightly smaller than the 28px diameter of the avatar
+          width: 28,
           height: 28,
         ),
       ),

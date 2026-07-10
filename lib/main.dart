@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => SmartPostViewmodel()),
       ],
       child: MaterialApp(
-        title: 'Oriflame Quick Share',
+        title: 'Oriflame',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
         home: const SmartShare(),

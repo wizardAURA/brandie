@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../core/constants/theme/app_Colours.dart';
 import '../model/post_model.dart';
 import '../components/socials_row.dart';
 import 'animations/animated_product_card.dart';
@@ -17,16 +16,14 @@ class PostOverlay extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. The Floating Product Card
+
           AnimatedProductCard(post: post),
           const SizedBox(height: 12),
-
-          // 2. The Music Pill (Separate Container)
           Container(
             height: 40,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.2), // Simple transparency
+              color: Colors.black.withOpacity(0.2),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
@@ -57,7 +54,7 @@ class PostOverlay extends StatelessWidget {
 
           const SizedBox(height: 8),
 
-          // 3. The Caption Box (Separate Container)
+
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -68,7 +65,7 @@ class PostOverlay extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                // --- TOP ROW: AI Suggestion & Edit Caption ---
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -97,7 +94,6 @@ class PostOverlay extends StatelessWidget {
 
                 const SizedBox(height: 12),
 
-                // --- MIDDLE ROW: Caption Text ---
                 RichText(
                   text: TextSpan(
                     style: const TextStyle(color: Colors.white, fontSize: 13, height: 1.4),
@@ -115,7 +111,6 @@ class PostOverlay extends StatelessWidget {
 
                 const SizedBox(height: 12),
 
-                // --- BOTTOM ROW: Referral Info ---
                 Text(
                   'Use my referral code: ${post.referralCode}',
                   style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 12, fontStyle: FontStyle.italic),
