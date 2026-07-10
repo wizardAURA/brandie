@@ -21,13 +21,24 @@ class SmartPostViewmodel extends ChangeNotifier{
     ),
     PostModel(
       id: '2',
-      backgroundImageUrl: 'assets/images/IMG_3191 (1).png',
+      backgroundImageUrl: 'assets/images/IMG_3191 (2).png',
       productName: 'Luminous Foundation',
       price: 24.99,
       discountText: '15% off',
       songTitle: 'Levitating by Dua Lipa',
       caption: '✨ Experience the elegance of Eclat Amour—a fragrance that captures the essence of romance and sophistication. Let every spritz wrap you in timeless charm and effortless allure. 💕 #EclatAmour #TimelessElegance',
       referralCode: 'UK-AMANDA3012',
+        referralLink: 'www.oriflame.com/giordani/amanda3012'
+    ),
+    PostModel(
+        id: '3',
+        backgroundImageUrl: 'assets/images/IMG_3191 (1).png',
+        productName: 'Luminous Foundation',
+        price: 24.99,
+        discountText: '15% off',
+        songTitle: 'Vogue by Madonna',
+        caption: 'Unlock the power of bold, beautiful lashes! With WonderLash Mascara, get ultimate length, volume, and definition for a stunning, eye-catching look. One swipe is all it takes! 💖 #WonderLash #LashesForDays',
+        referralCode: 'UK-AMANDA3012',
         referralLink: 'www.oriflame.com/giordani/amanda3012'
     ),
   ];

@@ -6,6 +6,8 @@ import '../../core/widgets/app_bar.dart';
 import '../../core/widgets/bottom_app_bar.dart';
 import 'components/post_overlays.dart';
 
+import 'components/animations/vertical_page_indicator.dart';
+
 class SmartShare extends StatefulWidget {
   const SmartShare({super.key});
 
@@ -42,10 +44,13 @@ class _SmartShareState extends State<SmartShare> {
                 return Stack(
                   fit: StackFit.expand,
                   children: [
+
                     Image.asset(
                       post.backgroundImageUrl,
                       fit: BoxFit.cover,
                     ),
+
+
                     Container(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -59,6 +64,7 @@ class _SmartShareState extends State<SmartShare> {
                         ),
                       ),
                     ),
+
 
                     Positioned(
                       top: 16,
@@ -82,7 +88,6 @@ class _SmartShareState extends State<SmartShare> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                     decoration: BoxDecoration(
@@ -125,7 +130,6 @@ class _SmartShareState extends State<SmartShare> {
                               ),
                             ],
                           ),
-                          // The updated Page Indicator Pill!
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                             decoration: BoxDecoration(
@@ -142,6 +146,16 @@ class _SmartShareState extends State<SmartShare> {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+
+
+                    Positioned(
+                      right: 16,
+                      bottom: 400,
+                      child: VerticalPageIndicator(
+                        itemCount: posts.length,
+                        currentIndex: index,
                       ),
                     ),
                     PostOverlay(post: post),
