@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../model/post_model.dart';
 import '../components/socials_row.dart';
 import 'animations/animated_product_card.dart';
+import 'edit_caption_page.dart';
 
 class PostOverlay extends StatelessWidget {
   final PostModel post;
@@ -79,15 +80,25 @@ class PostOverlay extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Row(
-                      children: const [
-                        Icon(Icons.edit, color: Colors.white, size: 14),
-                        SizedBox(width: 4),
-                        Text(
-                          'Edit Caption',
-                          style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EditCaptionPage(post: post),
+                          ),
+                        );
+                      },
+                      child: Row(
+                        children: const [
+                          Icon(Icons.edit, color: Colors.white, size: 14),
+                          SizedBox(width: 4),
+                          Text(
+                            'Edit Caption',
+                            style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
